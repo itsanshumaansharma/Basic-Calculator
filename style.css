@@ -1,0 +1,120 @@
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.button{
+    padding: 20px;
+    width: 10vw;
+    height: 10vh;
+    margin: 3px;
+    text-align: center;
+    border-radius: 50px;
+    color: rgb(240, 240, 240);
+    background-color: rgb(106, 102, 101);
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.button:hover{
+    width: 11vw;
+    height: 11vh;
+    color: Black;
+    background-color: rgb(250, 161, 18);
+    transition: all 0.3s ease;
+
+}
+
+.cal{
+    padding: 20px;
+    width: 10vw;
+    height: 10vh;
+    margin: 3px;
+    text-align: center;
+    border-radius: 50px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(187, 109, 81);
+    font-size: 28px;
+}
+
+.cal:hover{
+    width: 11vw;
+    height: 11vh;
+    color: rgb(233, 224, 224);
+    background-color: rgb(99, 70, 22);
+    transition: all 0.3s ease;
+
+}
+
+.fun{
+    padding: 20px;
+    width: 10vw;
+    height: 10vh;
+    margin: 3px;
+    text-align: center;
+    border-radius: 50px;
+    color: rgb(255, 253, 253);
+    background-color: rgb(160, 152, 148);
+    font-size: 28px;
+}
+
+.fun:hover{
+    width: 11vw;
+    height: 11vh;
+    color: Black;
+    background-color: rgb(219, 197, 163);
+    transition: all 0.3s ease;
+
+}
+
+.container{
+    height: 76vh;
+    width: 70vw;
+    border-radius: 3vmin;
+    border: none;
+}
+
+.row{
+    margin: 2px 0px;
+}
+
+.row input {
+    padding: 10px 20px; /* Adjusted padding for better sizing */
+    border: 2px solid transparent; /* Set an initial border to allow focus effect */
+    margin: 3vh 0; /* Adjusted margin */
+    border-radius: 5px;
+    outline: none; 
+    /* Removes the default focus outline */
+    
+}
+
+input[type="text"] {
+    font-size: 40px; /* Sets the text size */
+    color: #DEDEE0; /* Sets the text color */
+    background-color: rgb(72, 62, 62); /* Sets the background color */
+    height: 5vh;
+    width: 50vw;
+    text-align: end;
+}
+
+input[type="text"]:focus {
+    border-color: #FEFEFF; /* Changes border color when focused */
+    outline: none; 
+    /* Ensures no default outline */
+}
+
+input[type="text"]:hover{
+    height: 6vh;
+    width: 60vw;
+    font-size: 50px;
+    border: 2px solid white; /* Set an initial border to allow focus effect */    
+    border-radius: 5px;
+    transition: all 0.4s ease-in-out;
+}
+
