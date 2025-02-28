@@ -1,120 +1,105 @@
-*{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
-html, body{
-    height: 100%;
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1E2A5E;
+    padding: 20px;
+}
+
+/* Calculator Container */
+.container {
     width: 100%;
-}
-.button{
+    max-width: 350px;
+    background: #2C3E50;
     padding: 20px;
-    width: 10vw;
-    height: 10vh;
-    margin: 3px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    border-radius: 50px;
-    color: rgb(240, 240, 240);
-    background-color: rgb(106, 102, 101);
-    font-size: 28px;
+}
+
+/* Calculator Title */
+.text-center {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Display Screen */
+.display input {
+    width: 100%;
+    height: 60px;
+    background: #34495E;
+    color: white;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
     border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* General Button Styles */
+.button {
+    width: 100%;
+    height: 60px;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-
+    background: #7C93C3;
+    color: white;
+    transition: all 0.2s ease-in-out;
 }
 
-.button:hover{
-    width: 11vw;
-    height: 11vh;
-    color: Black;
-    background-color: rgb(250, 161, 18);
-    transition: all 0.3s ease;
-
+/* Operator Buttons */
+.operator {
+    background: #55679C;
 }
 
-.cal{
-    padding: 20px;
-    width: 10vw;
-    height: 10vh;
-    margin: 3px;
-    text-align: center;
-    border-radius: 50px;
-    color: rgb(0, 0, 0);
-    background-color: rgb(187, 109, 81);
-    font-size: 28px;
+/* Equal Button - Aligned in Last Right Corner */
+.equal {
+    background: #F39C12;
+    grid-column: span 1;
 }
 
-.cal:hover{
-    width: 11vw;
-    height: 11vh;
-    color: rgb(233, 224, 224);
-    background-color: rgb(99, 70, 22);
-    transition: all 0.3s ease;
-
+/* Button Hover Effects */
+.button:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
 }
 
-.fun{
-    padding: 20px;
-    width: 10vw;
-    height: 10vh;
-    margin: 3px;
-    text-align: center;
-    border-radius: 50px;
-    color: rgb(255, 253, 253);
-    background-color: rgb(160, 152, 148);
-    font-size: 28px;
-}
-
-.fun:hover{
-    width: 11vw;
-    height: 11vh;
-    color: Black;
-    background-color: rgb(219, 197, 163);
-    transition: all 0.3s ease;
-
-}
-
-.container{
-    height: 76vh;
-    width: 70vw;
-    border-radius: 3vmin;
-    border: none;
-}
-
-.row{
-    margin: 2px 0px;
-}
-
-.row input {
-    padding: 10px 20px; /* Adjusted padding for better sizing */
-    border: 2px solid transparent; /* Set an initial border to allow focus effect */
-    margin: 3vh 0; /* Adjusted margin */
-    border-radius: 5px;
-    outline: none; 
-    /* Removes the default focus outline */
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
     
-}
+    .button {
+        height: 50px;
+        font-size: 18px;
+    }
 
-input[type="text"] {
-    font-size: 40px; /* Sets the text size */
-    color: #DEDEE0; /* Sets the text color */
-    background-color: rgb(72, 62, 62); /* Sets the background color */
-    height: 5vh;
-    width: 50vw;
-    text-align: end;
+    .display input {
+        height: 50px;
+        font-size: 20px;
+    }
 }
-
-input[type="text"]:focus {
-    border-color: #FEFEFF; /* Changes border color when focused */
-    outline: none; 
-    /* Ensures no default outline */
-}
-
-input[type="text"]:hover{
-    height: 6vh;
-    width: 60vw;
-    font-size: 50px;
-    border: 2px solid white; /* Set an initial border to allow focus effect */    
-    border-radius: 5px;
-    transition: all 0.4s ease-in-out;
-}
-
