@@ -23,15 +23,25 @@ btnArr.forEach((btn)=>{
                         }
                     }
                 }
-                if (string.includes("X")) {
-                    let parts = string.split("X"); 
-                    if (parts.length === 2) {
-                        let num1 = parseFloat(parts[0]); // First number
-                        let num2 = parseFloat(parts[1]); // Second number
+                // if (string.includes("X")) {
+                //     let parts = string.split("X"); 
+                //     if (parts.length === 2) {
+                //         let num1 = parseFloat(parts[0]); // First number
+                //         let num2 = parseFloat(parts[1]); // Second number
                         
-                        if (!isNaN(num1) && !isNaN(num2)) {
-                            string = (num1 * num2).toString(); // Perform product calculation
-                        }
+                //         if (!isNaN(num1) && !isNaN(num2)) {
+                //             string = (num1 * num2).toString(); // Perform product calculation
+                //         }
+                //     }
+                // }
+                if(string.includes("X")){
+                    let mul = 1;
+                    let parts = string.split("X");
+                    for(let i = 0;i<parts.length;i++){
+                        mul*=parseFloat(parts[i]);
+                    }
+                    if(!isNaN(mul)){
+                        string = mul.toString();
                     }
                 }
                 if (string.includes("÷")) {
